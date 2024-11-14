@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos de RPG - FLIXER</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #a4e7ff;
+        }
+        .catalogo-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .catalogo-item {
+            background-color: #1c1c1c;
+            border: none;
+            border-radius: 10px;
+            color: #a4e7ff;
+            width: 200px;
+            text-align: center;
+            padding: 15px;
+        }
+        .catalogo-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .catalogo-item a {
+            color: #a4e7ff;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <h2 class="text-center">Jogos - RPG</h2>
+        <br>
+        <div class="catalogo-container">
+            <div class="catalogo-item">
+                <img src="img/witcher3.jfif" alt="The Witcher 3">
+                <a href="witcher3.html">The Witcher 3: Wild Hunt (Jogo)</a>
+            </div>
+            <div class="catalogo-item">
+                <img src="img/jogoRpg2.jfif" alt="Final Fantasy XV">
+                <a href="final-fantasy-xv.html">Final Fantasy XV (Jogo)</a>
+            </div>
+            <div class="catalogo-item">
+                <img src="img/jogoRpg3.jfif" alt="The Elder Scrolls V: Skyrim">
+                <a href="skyrim.html">The Elder Scrolls V: Skyrim (Jogo)</a>
+            </div>
+            <div class="catalogo-item">
+                <img src="img/cyberpunk.png" alt="Cyberpunk 2077">
+                <a href="cyberpunk-2077.html">Cyberpunk 2077 (Jogo)</a>
+            </div>
+            <div class="catalogo-item">
+                <img src="img/dragon-age-inquisition.jfif" alt="Dragon Age: Inquisition">
+                <a href="dragon-age-inquisition.html">Dragon Age: Inquisition (Jogo)</a>
+            </div>
+        </div>
+        <br><br>
+        <a href="jogos.html" class="btn btn-secondary mt-3 mb-5">Voltar para Gêneros de Jogos</a>
+        <a href="app.html" class="btn btn-secondary mt-3 mb-5">Voltar para a Página Inicial</a>
+    </div>
+</body>
+</html>

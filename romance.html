@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Filmes e Séries - Romance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000; /* Fundo preto */
+            color: #fff; /* Texto branco */
+        }
+        .catalogo-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .catalogo-item {
+            flex: 1 1 calc(33.333% - 20px);
+            background-color: #333;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .catalogo-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <h2>Catálogo de Filmes e Séries - Romance</h2>
+        <br>
+        <div class="catalogo-container">
+            <div class="catalogo-item">
+                <img src="img/diarioPaixao.jfif" alt="O Diário de uma Paixão">
+                <a href="diario-de-uma-paixao.html" class="text-white">O Diário de uma Paixão (Filme)</a>
+                <p class="card-text">A história de um amor à primeira vista entre Noah e Allie, que enfrenta a oposição de suas famílias e os desafios do tempo.</p>
+            </div>
+            <div class="catalogo-item">
+                <img src="img/10-coisas-que-eu-odeio-em-voce.jfif" alt="10 Coisas que Eu Odeio em Você">
+                <a href="10-coisas-que-eu-odeio-em-voce.html" class="text-white">10 Coisas que Eu Odeio em Você (Filme)</a>
+                <p class="card-text">Um adolescente contrata um bad boy para namorar uma jovem que é difícil de conquistar, resultando em situações engraçadas e românticas.</p>
+            </div>
+            <div class="catalogo-item">
+                <img src="img/friends.jfif" alt="Friends">
+                <a href="friends.html" class="text-white">Friends (Série)</a>
+                <p class="card-text">Acompanhe as aventuras e desventuras de seis amigos enquanto lidam com relacionamentos, trabalho e a vida em Nova York.</p>
+            </div>
+            <div class="catalogo-item">
+                <img src="img/PS-euTeAmo.jfif" alt="P.S. Eu Te Amo">
+                <a href="ps-eu-te-amo.html" class="text-white">P.S. Eu Te Amo (Filme)</a>
+                <p class="card-text">Após a morte de seu marido, uma jovem descobre cartas que ele deixou para guiá-la em sua vida, levando-a a redescobrir o amor.</p>
+            </div>
+            <!-- Novos Filmes/Séries Adicionados -->
+            <div class="catalogo-item">
+                <img src="img/casamento-do-meu-melhor-amigo.jfif" alt="O Casamento do Meu Melhor Amigo">
+                <a href="o-casamento-do-meu-melhor-amigo.html" class="text-white">O Casamento do Meu Melhor Amigo (Filme)</a>
+                <p class="card-text">Uma mulher descobre que ama seu melhor amigo quando ele anuncia que vai se casar.</p>
+            </div>
+            <div class="catalogo-item">
+                <img src="img/the-office.jfif" alt="The Office">
+                <a href="the-office.html" class="text-white">The Office (Série)</a>
+                <p class="card-text">Uma série de comédia que segue o cotidiano dos funcionários de um escritório, onde o romance e as amizades se entrelaçam.</p>
+            </div>
+        </div>
+        <br>
+        <a href="filmesESeries.html" class="btn btn-secondary mt-3" style="margin-bottom: 20px;">Voltar para Gêneros</a>
+        <a href="app.html" class="btn btn-secondary mt-3" style="margin-bottom: 20px;">Voltar para a Página Inicial</a>
+    </div>
+</body>
+</html>

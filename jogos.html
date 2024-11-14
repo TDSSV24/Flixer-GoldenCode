@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos - FLIXER</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000;
+            color: #a4e7ff;
+        }
+        .navbar {
+            background-color: #a4e7ff;
+        }
+        .navbar-brand img {
+            height: 60px;
+        }
+        .nav-link {
+            color: #000 !important;
+        }
+        .btn-outline-light {
+            color: #000 !important;
+            border-color: #000 !important;
+        }
+        .btn-outline-light:hover {
+            background-color: #000;
+            color: #fff !important;
+        }
+        .genre-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: #1c1c1c;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .card img {
+            height: 150px;
+            object-fit: cover;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .section-title {
+            font-size: 2em;
+            margin: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="app.html"><img src="img/flixer__2_-removebg-preview.png" alt="FLIXER"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="filmesEseries.html">Filmes e Séries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jogos.html">Jogos</a></li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Procure...">
+                    <button class="btn btn-outline-light" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="section-title">Jogos - Gêneros</h2>
+        <div class="genre-grid">
+            <a href="acao-jogos.html" class="card text-decoration-none">
+                <img src="img/callDut.jfif" class="card-img-top" alt="Ação">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Ação</h5>
+                </div>
+            </a>
+            <a href="estrategia-jogos.html" class="card text-decoration-none">
+                <img src="img/age-of.jfif" class="card-img-top" alt="Estratégia">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Estratégia</h5>
+                </div>
+            </a>
+            <a href="aventura-jogos.html" class="card text-decoration-none">
+                <img src="img/zelda.jfif" class="card-img-top" alt="Aventura">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Aventura</h5>
+                </div>
+            </a>
+            <a href="rpg-jogos.html" class="card text-decoration-none">
+                <img src="img/witcher3.jfif" class="card-img-top" alt="RPG">
+                <div class="card-body text-center">
+                    <h5 class="card-title">RPG</h5>
+                </div>
+            </a>
+        </div>
+
+        <!-- Botão de Voltar para a Página Inicial -->
+        <a href="app.html" class="btn btn-secondary mt-3" style="margin-bottom: 20px;">Voltar para a Página Inicial</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

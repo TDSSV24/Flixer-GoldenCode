@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Filmes e Séries - Ficção Científica</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000; /* Fundo preto */
+            color: #fff; /* Texto branco */
+        }
+        .catalogo-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .catalogo-item {
+            flex: 1 1 calc(33.333% - 20px);
+            background-color: #333;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .catalogo-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <h2>Catálogo de Filmes e Séries - Ficção Científica</h2>
+        <br>
+        <div class="catalogo-container">
+            <div class="catalogo-item">
+                <img src="img/a-origem.jfif" alt="A Origem">
+                <a href="inception.html" class="text-white">A Origem (Filme)</a>
+                <p class="card-text">Um ladrão que invade os sonhos das pessoas é oferecido uma chance de ter sua vida de volta se ele conseguir realizar a tarefa de "inception".</p>
+            </div>
+            <div class="catalogo-item">
+                <img src="img/interstelar.jfif" alt="Interstellar">
+                <a href="interstellar.html" class="text-white">Interstellar (Filme)</a>
+                <p class="card-text">Um grupo de exploradores viaja através de um buraco de minhoca na tentativa de garantir a sobrevivência da humanidade.</p>
+            </div>
+            <div class="catalogo-item">
+                <img src="img/matrix.jfif" alt="Matrix">
+                <a href="the-matrix.html" class="text-white">Matrix (Filme)</a>
+                <p class="card-text">Um hacker descobre que o mundo que conhece é uma simulação criada por máquinas e se junta a um grupo de rebeldes.</p>
+            </div>
+            <div class="catalogo-item">
+                <img src="img/black-mirror.jfif" alt="Black Mirror">
+                <a href="black-mirror.html" class="text-white">Black Mirror (Série)</a>
+                <p class="card-text">Uma série de antologia que explora a relação entre a tecnologia e a sociedade de maneira sombria e provocativa.</p>
+            </div>
+            <!-- Novos Filmes/Séries Adicionados -->
+            <div class="catalogo-item">
+                <img src="img/ex-machina.jfif" alt="Ex Machina">
+                <a href="ex-machina.html" class="text-white">Ex Machina (Filme)</a>
+                <p class="card-text">Um jovem programador é selecionado para participar de um experimento de inteligência artificial em uma mansão isolada.</p>
+            </div>
+            <div class="catalogo-item">
+                <img src="img/stranger-things.jfif" alt="Stranger Things">
+                <a href="stranger-things.html" class="text-white">Stranger Things (Série)</a>
+                <p class="card-text">Um grupo de crianças se une para desvendar o mistério do desaparecimento de um amigo e os eventos sobrenaturais que se seguem.</p>
+            </div>
+        </div>
+        <br>
+        <a href="filmesESeries.html" class="btn btn-secondary mt-3" style="margin-bottom: 20px;">Voltar para Gêneros</a>
+        <a href="app.html" class="btn btn-secondary mt-3" style="margin-bottom: 20px;">Voltar para a Página Inicial</a>
+    </div>
+</body>
+</html>

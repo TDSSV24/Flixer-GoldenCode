@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLIXER</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        /* Seus estilos anteriores... */
+        footer {
+            background-color: #0998e5;
+            color: #000000;
+            padding: 2px 0;
+        }
+        footer a {
+            color: #a4e7ff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Estilo para estrelas */
+        .star-rating {
+    font-size: 1.5em;
+    color: #f7f7f7;
+    cursor: pointer;
+}
+
+.star-rating .fa-star.rated {
+    color: #ffdd00; /* Cor de destaque para estrelas selecionadas */
+}
+
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLIXER</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        .navbar-brand img {
+            height: 60px;
+        }
+
+        .navbar {
+            background-color: #a4e7ff;
+        }
+
+        .nav-link,
+        .navbar-toggler-icon {
+            color: #060606 !important;
+        }
+
+        .btn-outline-light {
+            color: #030303;
+            border-color: #2c95e4;
+        }
+
+        .carousel img {
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .section-title {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+
+        .content-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .content-card {
+            background-color: #f3eded;
+            border: none;
+        }
+
+        .content-card img {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .btn-primary {
+            background-color: #0998e5;
+            border: none;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #0998e5;
+            color: #000000;
+            padding: 2px 0;
+        }
+
+        footer a {
+            color: #a4e7ff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .goldencode-logo {
+            height: 50px;
+        }
+
+        .profile-container {
+        position: relative;
+        display: flex;
+        flex-direction: column; /* Coloca a imagem e o nome em coluna */
+        align-items: center;
+    }
+
+    .user-name {
+        margin-top: 5px;
+        font-size: 14px;
+        color: white;
+        text-align: center;
+        display: none; /* Inicialmente o nome estará oculto */
+    }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="app.html"><img src="img/flixer__2_-removebg-preview.png" alt="FLIXER"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                    <li class="nav-item"><a class="nav-link" href="filmesEseries.html">Filmes e Séries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jogos.html">Jogos</a></li>
+                </ul>
+
+                            <!-- Formulário de pesquisa com imagem de perfil -->
+                <form class="d-flex align-items-center" role="search" id="searchForm">
+                    <div class="profile-container">
+                        <img src="img/perfil.png" alt="Perfil" class="rounded-circle me-2" style="width: 40px; height: 40px;" id="perfilImg">
+                    </div>
+                    <input class="form-control me-2" type="search" placeholder="Procure..." id="searchInput">
+                    <button class="btn btn-outline-light" type="submit">Pesquisar</button>
+                </form>
+
+                <script>
+                    document.getElementById('searchForm').addEventListener('submit', function(event) {
+                        event.preventDefault(); // Evita o envio padrão do formulário
+
+                        const searchInput = document.getElementById('searchInput').value.toLowerCase();
+
+                        // Mapeamento de termos de pesquisa para URLs das páginas
+                        const searchMapping = {
+                            'minha mãe é uma peça': 'minha-mae-e-uma-peca.html',
+                            'american pie': 'american-pie.html',
+                            'cobra kai': 'cobra-kai.html',
+                            'dose depla': 'dose-dupla.html',
+                            'john wick': 'jonh-wick.html',
+                            'peaky blinders': 'peaky-blinders.html',
+                            'rio': 'rio.html',
+                            'skyrim': 'skyrim.html',
+                            'toy story': 'toy-story.html',
+                            'velozes e furiosos': 'velozes-e-furiosos.html',
+                            'vingadores': 'vingadores.html',
+                            'witcher': 'witcher3.html',
+                            'zootopia': 'zootopia.html'
+                            // Adicione mais itens aqui com o nome da busca e o caminho da página correspondente
+                        };
+
+                        // Verifica se o termo pesquisado tem uma página correspondente
+                        const targetPage = searchMapping[searchInput];
+
+                        if (targetPage) {
+                            // Redireciona para a página correspondente
+                            window.location.href = targetPage;
+                        } else {
+                            alert('Nenhum resultado encontrado para a pesquisa.');
+                        }
+                    });
+                </script>
+
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carrossel -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/rio2.jpeg" class="d-block w-100" alt="Minha Mãe é uma Peça">
+            </div>
+            <div class="carousel-item">
+                <img src="img/it-a-coisa.jfif" class="d-block w-100" alt="Jogo">
+            </div>
+            <div class="carousel-item">
+                <img src="img/jogo.jfif" class="d-block w-100" alt="Rio 2">
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/cobrakai.jpeg" class="d-block w-100" alt="serie">
+            </div>
+            <div class="carousel-item">
+                <img src="img/harry-potter.jfif" class="d-block w-100" alt="Rio 2">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <br><br>
+
+    <head>
+        <link rel="stylesheet" href="seu-estilo.css">
+        <style>
+            .card-body .btn {
+                display: block;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    
+
+    <div class="container">
+        <h1 class="section-title">DESTAQUES DO MÊS:</h1>
+        <br><br>
+        <div class="content-grid">
+            <div class="card content-card" style="width: 18rem;">
+                <img src="img/fortnite.jfif" class="card-img-top" alt="Fortnite">
+                <div class="card-body">
+                    <h5 class="card-title">Fortnite</h5>
+                    <p class="card-text">Fortnite é um jogo de batalha real onde os jogadores competem em uma ilha para ser o último sobrevivente. Ele combina combate, construção e exploração, além de oferecer modos criativos. O jogo é conhecido por suas colaborações com várias franquias e atualizações frequentes, mantendo a narrativa e a experiência sempre frescas e emocionantes.</p>
+                    <a href="jogos.html" class="btn btn-primary">Jogar</a>
+                </div>
+            </div>
+            <div class="card content-card" style="width: 18rem;">
+                <img src="img/coringa2.jfif" class="card-img-top" alt="Coringa: Delírio a Dois">
+                <div class="card-body">
+                    <h5 class="card-title">Coringa: Delírio a Dois</h5>
+                    <p class="card-text">Em “Joker Loucura a Dois” encontramos Arthur Fleck institucionalizado em Arkham, à espera de ser julgado pelos seus crimes como Joker. Enquanto luta contra a sua dupla personalidade, Arthur não só encontra o amor verdadeiro, mas também a música que sempre esteve dentro dele.</p>
+                    <a href="filmesEseries.html" class="btn btn-primary">Assistir</a>
+                </div>
+            </div>
+            <div class="card content-card" style="width: 18rem;">
+                <img src="img/grotesquerie.jfif" class="card-img-top" alt="Grotesquerie">
+                <div class="card-body">
+                    <h5 class="card-title">Grotesquerie</h5>
+                    <p class="card-text">Grotesquerie é uma minissérie de terror criada por Ryan Murphy que segue a detetive Lois Tryon enquanto ela investiga uma série de crimes perturbadores em uma pequena comunidade. Cada morte parece ter uma conexão pessoal e inquietante com Lois, como se o assassino estivesse jogando com ela.</p>
+                    <a href="filmesEseries.html" class="btn btn-primary">Assistir</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var planoAtivo = false;
+
+        function verificarPlano() {
+            if (!planoAtivo) {
+                alert("Você precisa de um plano ativo para assistir este conteúdo. Assine agora ou experimente 1 mês grátis!");
+                window.location.href = "planos.html";
+            } else {
+                alert("Aproveite seu conteúdo!");
+            }
+        }
+    </script>
+
+<footer class="mt-5">
+    <div class="container">
+        <div class="row d-flex justify-content-between">
+            <!-- Links úteis -->
+            <div class="col-md-4">
+                <br>
+                <ul class="list-unstyled d-flex flex-column align-items-start">
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="politica.html">Política de Privacidade</a></li>
+                    <li><a href="termos.html">Termos de Uso</a></li>
+                </ul>
+            </div>
+            <!-- Avaliação com estrelas -->
+            <div class="col-md-4 text-center">
+                <br>
+                <div class="star-rating" id="rating">
+                    <i class="fas fa-star" data-index="1"></i>
+                    <i class="fas fa-star" data-index="2"></i>
+                    <i class="fas fa-star" data-index="3"></i>
+                    <i class="fas fa-star" data-index="4"></i>
+                    <i class="fas fa-star" data-index="5"></i>
+                </div>
+                <button id="submitRating" class="btn btn-primary mt-2">Enviar Avaliação</button>
+                <p id="ratingStatus" style="color: rgb(0, 0, 0); display: none;">Avaliação enviada com sucesso!</p>
+            </div>
+        </div>
+        <hr class="bg-secondary">
+        <div class="text-center">
+            <p>&copy; 2024 FLIXER. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const stars = document.querySelectorAll('.star-rating .fa-star');
+    const submitButton = document.getElementById('submitRating');
+    const ratingStatus = document.getElementById('ratingStatus');
+    let rating = 0;
+
+    // Função para manipular a avaliação
+    function handleRating(event) {
+        const clickedIndex = parseInt(event.target.getAttribute('data-index'));
+        rating = clickedIndex; // Atualiza a avaliação com o índice da estrela clicada
+
+        // Atualiza o estilo das estrelas
+        stars.forEach(star => {
+            if (parseInt(star.getAttribute('data-index')) <= rating) {
+                star.classList.add('rated');
+            } else {
+                star.classList.remove('rated');
+            }
+        });
+    }
+
+    // Função para enviar a avaliação
+    function sendRating() {
+        if (rating === 0) {
+            alert("Por favor, selecione uma avaliação.");
+            return;
+        }
+
+        // Aqui você pode enviar a avaliação para o servidor ou fazer outro processo
+        // Para simular, vamos apenas exibir uma mensagem de sucesso
+        ratingStatus.style.display = 'block'; // Exibe a mensagem de sucesso
+
+        // Resetando as estrelas
+        stars.forEach(star => {
+            star.classList.remove('rated');
+        });
+
+        // Zera a avaliação após o envio
+        rating = 0;
+
+        // Ocultar a mensagem após 2 segundos
+        setTimeout(() => {
+            ratingStatus.style.display = 'none';
+        }, 2000);
+    }
+
+    // Adiciona o evento de clique em cada estrela
+    stars.forEach(star => {
+        star.addEventListener('click', handleRating);
+    });
+
+    // Adiciona o evento de envio da avaliação
+    submitButton.addEventListener('click', sendRating);
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var planoAtivo = false;
+
+        function verificarPlano() {
+            if (!planoAtivo) {
+                alert("Você precisa de um plano ativo para assistir este conteúdo. Assine agora ou experimente 1 mês grátis!");
+                window.location.href = "planos.html";
+            } else {
+                alert("Aproveite seu conteúdo!");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

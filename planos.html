@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos - FLIXER</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="app.html">
+                <img src="img/flixer__2_-removebg-preview.png" alt="..." height="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="text-center">Nossos Planos</h1>
+        <p class="text-center">Escolha o plano ideal para você e aproveite todos os benefícios que oferecemos.</p>
+
+        <div class="alert alert-success text-center" role="alert">
+            <h4 class="alert-heading">Teste GRÁTIS por 1 mês!</h4>
+            <p>Experimente qualquer um dos nossos planos gratuitamente por 30 dias. Cancele a qualquer momento sem
+                custos adicionais.</p>
+            <a href="#" class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#modalAviso">Teste Grátis
+                Agora</a>
+        </div>
+        <!-- Modal de Aviso -->
+        <div class="modal fade" id="modalAviso" tabindex="-1" aria-labelledby="modalAvisoLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalAvisoLabel">Plano Grátis Ativado</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                            onclick="redirecionarIndex()"></button>
+                    </div>
+                    <div class="modal-body">
+                        Você ativou o plano de teste grátis por 1 mês! Aproveite e explore todos os benefícios da FLIXER
+                        durante esse período.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                            onclick="redirecionarIndex()">Ir para a tela inicial</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function redirecionarIndex() {
+                window.location.href = "index.html";
+            }
+        </script>
+
+
+        <!-- Restante do conteúdo das opções de planos -->
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-header">Plano Básico</div>
+                    <div class="card-body">
+                        <h5 class="card-title">R$ 19,90/mês</h5>
+                        <p class="card-text">Ideal para usuários individuais que querem acesso a conteúdos populares sem
+                            gastar muito. O Plano Básico oferece:</p>
+                        <ul class="list-unstyled">
+                            <li>- Qualidade padrão (SD)</li>
+                            <li>- Acesso a uma seleção de filmes, séries e jogos</li>
+                            <li>- Acesso em um único dispositivo</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Assinar</a>
+                    </div>
+                    <div class="card-footer text-muted">Acesso em um dispositivo</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-header">Plano Padrão</div>
+                    <div class="card-body">
+                        <h5 class="card-title">R$ 29,90/mês</h5>
+                        <p class="card-text">Perfeito para quem quer compartilhar a experiência em alta definição com a
+                            família ou amigos. O Plano Padrão oferece:</p>
+                        <ul class="list-unstyled">
+                            <li>- Qualidade em HD</li>
+                            <li>- Catálogo ampliado de filmes e séries</li>
+                            <li>- Acesso em até dois dispositivos simultâneos</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Assinar</a>
+                    </div>
+                    <div class="card-footer text-muted">Acesso em dois dispositivos simultâneos</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-header">Plano Premium</div>
+                    <div class="card-body">
+                        <h5 class="card-title">R$ 39,90/mês</h5>
+                        <p class="card-text">Ideal para quem quer a melhor qualidade de imagem e som, além de uma
+                            experiência sem limitações. O Plano Premium oferece:</p>
+                        <ul class="list-unstyled">
+                            <li>- Qualidade Ultra HD (4K)</li>
+                            <li>- Acesso total a todos os conteúdos exclusivos e lançamentos</li>
+                            <li>- Acesso em até quatro dispositivos simultâneos</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Assinar</a>
+                    </div>
+                    <div class="card-footer text-muted">Acesso em quatro dispositivos simultâneos</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

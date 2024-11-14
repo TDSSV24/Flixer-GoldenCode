@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLIXER</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        .navbar-brand img {
+            height: 60px;
+        }
+
+        .navbar {
+            background-color: #a4e7ff;
+        }
+
+        .nav-link,
+        .navbar-toggler-icon {
+            color: #060606 !important;
+        }
+
+        .btn-outline-light {
+            color: #030303;
+            border-color: #2c95e4;
+        }
+
+        .carousel img {
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .section-title {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+
+        .content-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .content-card {
+            background-color: #f3eded;
+            border: none;
+        }
+
+        .content-card img {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .btn-primary {
+            background-color: #0998e5;
+            border: none;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #0998e5;
+            color: #000000;
+            padding: 2px 0;
+        }
+
+        footer a {
+            color: #a4e7ff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .goldencode-logo {
+            height: 50px;
+        }
+
+        .carousel-item img {
+    object-fit: cover; 
+    height: 115vh; /* Ajusta a altura para a tela cheia */
+    width: 100%;
+}
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="img/flixer__2_-removebg-preview.png" alt="FLIXER"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#destaque-mes">Destaque</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+                <a href="login.html" class="btn btn-outline-light">Entrar</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio">
+        <!-- Carrossel -->
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/rio2.jpeg" class="d-block w-100" alt="filme">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/it-a-coisa.jfif" class="d-block w-100" alt="filme">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/jogo.jfif" class="d-block w-100" alt="Rio 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/cobrakai.jpeg" class="d-block w-100" alt="serie">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/harry-potter.jfif" class="d-block w-100" alt="Rio 2">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <br><br>
+
+    <head>
+        <link rel="stylesheet" href="seu-estilo.css">
+        <style>
+            .card-body .btn {
+                display: block;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+
+    <section id="destaque-mes">
+        <div class="container">
+            <h1 class="section-title">DESTAQUES DO MÊS:</h1>
+            <br><br>
+            <div class="content-grid">
+                <div class="card content-card" style="width: 18rem;">
+                    <img src="img/fortnite.jfif" class="card-img-top" alt="Fortnite">
+                    <div class="card-body">
+                        <h5 class="card-title">Fortnite</h5>
+                        <p class="card-text">Fortnite é um jogo de batalha real onde os jogadores competem em uma ilha
+                            para ser o último sobrevivente. Ele combina combate, construção e exploração, além de
+                            oferecer modos criativos. O jogo é conhecido por suas colaborações com várias franquias e
+                            atualizações frequentes, mantendo a narrativa e a experiência sempre frescas e emocionantes.
+                        </p>
+                        <a href="#" class="btn btn-primary" onclick="verificarPlano()">Disponível para assisantes</a>
+                    </div>
+                </div>
+                <div class="card content-card" style="width: 18rem;">
+                    <img src="img/coringa2.jfif" class="card-img-top" alt="Coringa: Delírio a Dois">
+                    <div class="card-body">
+                        <h5 class="card-title">Coringa: Delírio a Dois</h5>
+                        <p class="card-text">Em “Joker Loucura a Dois” encontramos Arthur Fleck institucionalizado em
+                            Arkham, à espera de ser julgado pelos seus crimes como Joker. Enquanto luta contra a sua
+                            dupla personalidade, Arthur não só encontra o amor verdadeiro, mas também a música que
+                            sempre esteve dentro dele.</p>
+                        <a href="#" class="btn btn-primary" onclick="verificarPlano()">Disponível para assisantes</a>
+                    </div>
+                </div>
+                <div class="card content-card" style="width: 18rem;">
+                    <img src="img/grotesquerie.jfif" class="card-img-top" alt="Grotesquerie">
+                    <div class="card-body">
+                        <h5 class="card-title">Grotesquerie</h5>
+                        <p class="card-text">Grotesquerie é uma minissérie de terror criada por Ryan Murphy que segue a
+                            detetive Lois Tryon enquanto ela investiga uma série de crimes perturbadores em uma pequena
+                            comunidade. Cada morte parece ter uma conexão pessoal e inquietante com Lois, como se o
+                            assassino estivesse jogando com ela.</p>
+                        <a href="#" class="btn btn-primary" onclick="verificarPlano()">Disponível para assisantes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br><br><br><br>
+    <p>______________________________________________________________________________________________________________________________________________________________________________________________</p>
+    <br>
+
+    <section id="planos">
+        <div class="container mt-4">
+            <h1 class="text-center">Nossos Planos</h1>
+            <p class="text-center">Escolha o plano ideal para você e aproveite todos os benefícios que oferecemos.</p>
+
+            <div class="alert alert-success text-center" role="alert">
+                <h4 class="alert-heading">Teste GRÁTIS por 1 mês!</h4>
+                <p>Experimente qualquer um dos nossos planos gratuitamente por 30 dias. Cancele a qualquer momento sem
+                    custos adicionais.</p>
+                <a href="cadastro.html" class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#modalAviso">Teste
+                    Grátis
+                    Agora</a>
+            </div>
+            <!-- Modal de Aviso -->
+            <div class="modal fade" id="modalAviso" tabindex="-1" aria-labelledby="modalAvisoLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalAvisoLabel">Plano Grátis Ativado</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                onclick="redirecionarIndex()"></button>
+                        </div>
+                        <div class="modal-body">
+                            Você ativou o plano de teste grátis por 1 mês! Aproveite e explore todos os benefícios da
+                            FLIXER
+                            durante esse período.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                onclick="redirecionarIndex()">Ir para a tela inicial</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function redirecionarIndex() {
+                    window.location.href = "index.html";
+                }
+            </script>
+
+
+            <!-- Restante do conteúdo das opções de planos -->
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-header">Plano Básico</div>
+                        <div class="card-body">
+                            <h5 class="card-title">R$ 19,90/mês</h5>
+                            <p class="card-text">Ideal para usuários individuais que querem acesso a conteúdos populares
+                                sem
+                                gastar muito. O Plano Básico oferece:</p>
+                            <ul class="list-unstyled">
+                                <li>- Qualidade padrão (SD)</li>
+                                <li>- Acesso a uma seleção de filmes, séries e jogos</li>
+                                <li>- Acesso em um único dispositivo</li>
+                            </ul>
+                            <a href="cadastro.html" class="btn btn-primary">Assinar</a>
+                        </div>
+                        <div class="card-footer text-muted">Acesso em um dispositivo</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-header">Plano Padrão</div>
+                        <div class="card-body">
+                            <h5 class="card-title">R$ 29,90/mês</h5>
+                            <p class="card-text">Perfeito para quem quer compartilhar a experiência em alta definição
+                                com a
+                                família ou amigos. O Plano Padrão oferece:</p>
+                            <ul class="list-unstyled">
+                                <li>- Qualidade em HD</li>
+                                <li>- Catálogo ampliado de filmes e séries</li>
+                                <li>- Acesso em até dois dispositivos simultâneos</li>
+                            </ul>
+                            <a href="cadastro.html" class="btn btn-primary">Assinar</a>
+                        </div>
+                        <div class="card-footer text-muted">Acesso em dois dispositivos simultâneos</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-header">Plano Premium</div>
+                        <div class="card-body">
+                            <h5 class="card-title">R$ 39,90/mês</h5>
+                            <p class="card-text">Ideal para quem quer a melhor qualidade de imagem e som, além de uma
+                                experiência sem limitações. O Plano Premium oferece:</p>
+                            <ul class="list-unstyled">
+                                <li>- Qualidade Ultra HD (4K)</li>
+                                <li>- Acesso total a todos os conteúdos exclusivos e lançamentos</li>
+                                <li>- Acesso em até quatro dispositivos simultâneos</li>
+                            </ul>
+                            <a href="cadastro.html" class="btn btn-primary">Assinar</a>
+                        </div>
+                        <div class="card-footer text-muted">Acesso em quatro dispositivos simultâneos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br><br><br>
+    <p>______________________________________________________________________________________________________________________________________________________________________________________________</p>
+    <br>
+
+    <section id="contato">
+        <div class="container my-5">
+            <h1>Contato</h1>
+            <p>Se você tiver alguma dúvida, sugestão ou problema, preencha o formulário abaixo para entrar em contato
+                conosco. Responderemos o mais rápido possível.</p>
+
+            <form>
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="Seu e-mail" required>
+                </div>
+                <div class="mb-3">
+                    <label for="assunto" class="form-label">Assunto</label>
+                    <input type="text" class="form-control" id="assunto" placeholder="Assunto da mensagem" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mensagem" class="form-label">Mensagem</label>
+                    <textarea class="form-control" id="mensagem" rows="4" placeholder="Escreva sua mensagem"
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+
+            <h2 class="section-title mt-4">Outras Formas de Contato</h2>
+            <p>Você também pode nos enviar um e-mail direto:</p>
+            <ul>
+                <li><strong>Email:</strong> 
+                    <a href="mailto:supporteflixer@gmail.com">suporteflixer@gmail.com</a>
+                </li>
+            </ul>
+
+
+            <!-- Botão Voltar -->
+            <a href="javascript:history.back()" class="btn btn-secondary mt-4">Voltar</a>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var planoAtivo = false;
+
+        function verificarPlano() {
+            if (!planoAtivo) {
+                alert("Você precisa de um plano ativo para assistir este conteúdo. Assine agora ou experimente 1 mês grátis!");
+                window.location.href = "planos.html";
+            } else {
+                alert("Aproveite seu conteúdo!");
+            }
+        }
+    </script>
+
+    <!-- Rodapé -->
+    <footer class="mt-5">
+        <div class="container">
+            <div class="row d-flex justify-content-between">
+                <!-- Links úteis -->
+                <div class="col-md-4">
+                    <br>
+                    <ul class="list-unstyled d-flex flex-column align-items-start">
+                        <li><a href="politica.html">Política de Privacidade</a></li>
+                        <li><a href="termos.html">Termos de Uso</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <div class="text-center">
+                <p>&copy; 2024 FLIXER. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var planoAtivo = false;
+
+        function verificarPlano() {
+            if (!planoAtivo) {
+                alert("Você precisa de um plano ativo para assistir este conteúdo. Assine agora ou experimente 1 mês grátis!");
+                window.location.href = "login.html";
+            } else {
+                alert("Aproveite seu conteúdo!");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
